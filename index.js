@@ -5,6 +5,7 @@ const pino = require("pino")();
 
 const store = require("electron-json-storage");
 const { stat, mkdir, readdir, readFile } = require("fs/promises");
+const { watch } = require("fs");
 
 const CheckWorkspaceLocal = (workspace) => {
   const workspace_config_local = path.join(workspace, ".hinoki-orange");
@@ -58,7 +59,13 @@ const LoadWorkspaceLocalArticles = (workspace) => {
         // not exist
         return mkdir(workspace_articles);
       }
-    ) /** scan */
+    ) /** watch */
+    .then(() => {
+      watch(workspace_articles, (evt, filename) => {
+        console.log(`${evt}: ${filename}`);
+      });
+      return Promise.resolve();
+    }) /** scan */
     .then(() => readdir(workspace_articles))
     .then((paths) =>
       paths
