@@ -2,14 +2,30 @@
   "name": "svelte-app",
   "version": "1.0.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
+    "dev-watch": "rollup -c -w",
+    "dev-web": "sirv public --no-clear",
+    "dev-electron": "electron .",
+    "dev": "cross-env NODE_ENV=development concurrently --kill-others yarn:dev-watch yarn:dev-electron",
+    "dev2": "cross-env NODE_ENV=development concurrently --kill-others yarn:dev-web yarn:dev-watch "
+  },
+  "scripts-bak": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start1": "electron . ",
+    "start": "concurrently --kill-others npm:start-webserver npm:start-electron",
+    "start-electron": "electron . ",
+    "start-webserver": "sirv public --no-clear"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-html": "^0.2.3",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "concurrently": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^14.0.1",
+    "electron-reload": "^2.0.0-alpha.1",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -18,6 +34,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "platform-folders": "^0.5.4",
     "sirv-cli": "^1.0.0"
   }
 }

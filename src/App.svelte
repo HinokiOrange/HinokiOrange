@@ -1,10 +1,19 @@
 <script>
+	import { ipc } from "./electron.svelte";
+
 	export let name;
+
+	const test = () => {
+		ipc.invoke("select:dir").then((v) => console.log(v));
+	};
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1 on:click={test}>ff{name}!</h1>
+	<p>
+		Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+		how to build Svelte apps.
+	</p>
 </main>
 
 <style>
