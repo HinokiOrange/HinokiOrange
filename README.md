@@ -1,3 +1,8 @@
+# develop
+
+- `npm run build:watch` at `frontend`
+- `wails dev` at `root`
+
 # README
 
 ## About
