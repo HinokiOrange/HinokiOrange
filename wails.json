@@ -1,0 +1,11 @@
+{
+  "name": "HinokiOrange",
+  "outputfilename": "HinokiOrange",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "wailsjsdir": "./frontend",
+  "author": {
+    "name": "UMiKaMe0729",
+    "email": "shangtangcct@gmail.com"
+  }
+}

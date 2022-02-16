@@ -1,4 +1,9 @@
-/node_modules/
-/public/build/
+# Wails bin directory
+build/bin
 
-.DS_Store
+# IDEs
+.idea
+.vscode
+
+# The black hole that is...
+node_modules

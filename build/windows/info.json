@@ -1,0 +1,15 @@
+{
+	"fixed": {
+		"file_version": "1.0.0"
+	},
+	"info": {
+		"0000": {
+			"ProductVersion": "1.0.0",
+			"CompanyName": "HinokiOrange",
+			"FileDescription": "HinokiOrange",
+			"LegalCopyright": "Copyright.........",
+			"ProductName": "HinokiOrange",
+			"Comments": "Built using Wails (https://wails.app)"
+		}
+	}
+}
