@@ -18,13 +18,18 @@ var assets embed.FS
 //go:embed build/appicon.png
 var icon []byte
 
+const (
+	AppName   = "HinokiOrange"
+	Copyright = "© 2021 HinokiOrange"
+)
+
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
 
 	// Create application with options
 	err := wails.Run(&options.App{
-		Title:             "HinokiOrange",
+		Title:             AppName,
 		Width:             720,
 		Height:            570,
 		MinWidth:          720,
@@ -57,8 +62,8 @@ func main() {
 			WebviewIsTransparent: true,
 			WindowIsTranslucent:  true,
 			About: &mac.AboutInfo{
-				Title:   "My Application",
-				Message: "© 2021 Me",
+				Title:   AppName,
+				Message: Copyright,
 				Icon:    icon,
 			},
 		},
