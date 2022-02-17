@@ -17,7 +17,7 @@ const App: Component = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Solidasd
+          Learn Solidasds
         </a>
       </header>
     </div>

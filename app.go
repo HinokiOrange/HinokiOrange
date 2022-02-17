@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 )
 
 // App application struct
@@ -34,4 +35,12 @@ func (b *App) shutdown(ctx context.Context) {
 // Greet returns a greeting for the given name
 func (b *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s!", name)
+}
+
+func (b *App) GetUserConfigDir() (string, error) {
+	if dir, err := os.UserConfigDir(); err != nil {
+		return "", err
+	} else {
+		return dir, nil
+	}
 }
