@@ -1,21 +1,19 @@
 {
   "name": "HinokiOrange",
   "assetdir": "./frontend/dist",
-  "frontend:build": "",
+  "frontend:build": "npm run build",
   "frontend:install": "npm install",
-  "frontend:dev": "",
-  "wailsjsdir": "./frontend/src",
-  "version": "2",
-  "Path": "",
-  "BuildDir": "",
+  "frontend:dev": "npm run build",
+  "frontend:dev:watcher": "npm run build:watch",
+  "wailsjsdir": "./frontend",
+  "version": "3",
   "outputfilename": "HinokiOrange.exe",
-  "OutputType": "",
-  "Platform": "",
-  "Author": {
-    "name": "UMiKaMe0729",
-    "email": "shangtangcct@gmail.com"
+  "info": {
+    "companyName": "HinokiOrange",
+    "productName": "HinokiOrange",
+    "productVersion": "1.0.0",
+    "copyright": "Copyright (c) 2020 HinokiOrange"
   },
   "debounceMS": 100,
-  "devserverurl": "http://localhost:34115",
-  "appargs": ""
+  "devserverurl": "http://localhost:34115"
 }
