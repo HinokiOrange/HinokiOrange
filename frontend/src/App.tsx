@@ -1,4 +1,4 @@
-import { createEffect, Match, Switch } from "solid-js";
+import { Match, Switch } from "solid-js";
 import { getGlobalState, GlobalStateProvider } from "./globalState";
 
 function Main() {

@@ -1,9 +1,10 @@
-module changeme
+module hinoki-orange
 
 go 1.17
 
 require (
 	github.com/denisbrodbeck/machineid v1.0.1
+	github.com/shirou/gopsutil/v3 v3.22.2
 	github.com/wailsapp/wails/v2 v2.0.0-beta.32
 )
 
@@ -28,13 +29,15 @@ require (
 	github.com/leaanthony/winc v0.0.0-20220208061147-37b059b9dc3b // indirect
 	github.com/pkg/browser v0.0.0-20210706143420-7d21f8c997e2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
 	github.com/savsgio/gotils v0.0.0-20200117113501-90175b0fbe3f // indirect
 	github.com/tkrajina/go-reflector v0.5.5 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.28.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
+	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	golang.org/x/net v0.0.0-20210510120150-4163338589ed // indirect
-	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
+	golang.org/x/sys v0.0.0-20220227234510-4e6760a101f9 // indirect
 )
 
 // replace github.com/wailsapp/wails/v2 v2.0.0-beta.30 => C:\Users\shang\go\pkg\mod\github.com\wailsapp\wails\v2@v2.0.0-beta.30

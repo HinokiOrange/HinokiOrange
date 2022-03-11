@@ -46,7 +46,7 @@ func main() {
 		LogLevel:          logger.DEBUG,
 		OnStartup:         app.startup,
 		OnDomReady:        app.domReady,
-		OnShutdown:        app.shutdown,
+		// OnShutdown:        app.shutdown,
 		Bind: []interface{}{
 			app,
 		},
